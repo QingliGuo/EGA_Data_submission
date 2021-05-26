@@ -58,7 +58,8 @@ sample=$(sed -n "${SGE_TASK_ID}p" $samples)
 
 path=/path-to-your-encrypted-files/
 
-## we need to submitted all encrypted files generated from the last step; there are 3 files. **** ADD YOUR PASSWORD and ACCOUNT in each line *****
+## we need to submitted all encrypted files generated from the last step; there are 3 files. 
+## **** ADD YOUR PASSWORD and ACCOUNT in each line *****
 
 ASPERA_SCP_PASS=[YOUR-PASSWORD] ascp -P33001  -O33001 -QT -l300M -L- $path/"$sample".gpg [YOUR-ACCOUNT]@fasp.ega.ebi.ac.uk:/.
 ASPERA_SCP_PASS=[YOUR-vPASSWORD] ascp -P33001  -O33001 -QT -l300M -L- $path/"$sample".gpg.md5 [YOUR-ACCOUNT]@fasp.ega.ebi.ac.uk:/.
