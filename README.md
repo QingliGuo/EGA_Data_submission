@@ -1,6 +1,6 @@
 # EGA Data submission
 
-Describe steps of data submission to EGA database (it is a pain for a first time submitter), data encryption and submission codes adapted from [Dr Salpie Nowinski](https://github.com/salpie)
+Describe steps of data submission to EGA database (it is a pain for a first time submitter), data encryption and submission codes adapted from [Salpie Nowinski](https://github.com/salpie)
 
 ## Apply EGA submission account
 
@@ -18,26 +18,61 @@ This step can be processed prior to the account application as it may takes quit
 #$ -cwd           # Set the working directory for the job to the current directory
 #$ -j y
 
-##----------------------Modification part---------------------
 #$ -pe smp 4    # Request 4 core
 #$ -l h_vmem=20G
 #$ -N encrypt
-#$ -l h_rt=20:00:00 # Request 40 hour runtime
-#$ -t 1-3
+#$ -l h_rt=20:00:00 # Request 20 hour runtime
+#$ -t 1-3 ## I have 3 BAMs to be encrypted
 
 module load java
 
-samples=/data/BCI-EvoCa2/qingli/Projects/HighDepth_IBDs/C277/encrypted_data/samples.list
+bam_path=/path-to-your-bamfile-folder/
+
+## the following two lines will assign bam files to 3 jobs if there are free computing resources:
+samples=/path-to-your-sample.list-file/samples.list ## a configure file about file names of all BAMs you want to encrypt, one bam at one line.
 sample=$(sed -n "${SGE_TASK_ID}p" $samples)
 
-java -Xmx70G -jar /data/BCI-EvoCa2/salpie/EGA/EgaCryptor/EgaCryptor.jar -file /data/BCI-IBD/NOVA/test/pipeline/data/C277/wgs/bwa_alignment/validated/$sample
+java -Xmx70G -jar /data/BCI-EvoCa2/salpie/EGA/EgaCryptor/EgaCryptor.jar -file $bam_path/$sample
+
 ```
 
 ## Sending encrypted files to EGA box
+When encrypted files and account are ready, next step is to submit all files to EGA box associated to your applied account using aspera:
+
+```
+#!/bin/bash
+#$ -j y
+#$ -cwd 
+#$ -S /bin/bash
+#$ -l h_rt=70:0:0 ## yes, it could that long for WGS 
+#$ -pe smp 4
+#$ -l h_vmem=15G
+#$ -N submission
+#$ -m beas
+#$ -t 1-3
+
+module load aspera
+
+samples=/path-to-your-sample.list-file/samples.list. ## similar configuration file telling each array jobs which files will be submitted
+sample=$(sed -n "${SGE_TASK_ID}p" $samples)
+
+path=/path-to-your-encrypted-files/
+
+## we need to submitted all encrypted files generated from the last step; there are 3 file, so three lines. ADD YOUR PASSWORD and ACCOUNT TO ASPERA_SCP_PASS
+
+ASPERA_SCP_PASS=[YOUR-PASSWORD] ascp -P33001  -O33001 -QT -l300M -L- $path/"$sample".gpg [YOUR-ACCOUNT]@fasp.ega.ebi.ac.uk:/.
+ASPERA_SCP_PASS=[YOUR-vPASSWORD] ascp -P33001  -O33001 -QT -l300M -L- $path/"$sample".gpg.md5 [YOUR-ACCOUNT]@fasp.ega.ebi.ac.uk:/.
+ASPERA_SCP_PASS=[YOUR-PASSWORD] ascp -P33001  -O33001 -QT -l300M -L- $path/"$sample".md5 [YOUR-ACCOUNT]@fasp.ega.ebi.ac.uk:/.
+
+```
 
 ## Filling up metadata for the study
+There are detailed videos teaching how to fill the metadata , it was really helpful https://ega-archive.org/submission/tools/submitter-portal. But two points may drive you crazy.
 + First of all, DO NOT USE Safri!!! Use other browser instead;
 + For the contact of DAC, do not add space between the telephone number;
+
+Once the whole stage filled up, you will get the accession number after you submit the registered study.
+
 ## Notify EGA team Re submission completion
 
-## Obtainning EGA acession number
+Let the EGA team know you are done, so your stuff will be published online.
