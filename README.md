@@ -7,7 +7,7 @@ Describe steps of data submission to EGA database (it is a pain for a first time
 I wrote an email for the account request from EGA helpdesk, helpdesk@ega-archive.org. There maybe other approaches. Currently we need two files to obtain the account:
 
 + Data Processing Agreement (DPA), signed by the PI and institution, https://ega-archive.org/files/EGA_Data_Processing_Agreement_v1.0.pdf
-+ Submittor's info, signed by the PI also, https://ega-archive.org/files/Authorised_submitters_list.docx
++ Submitter's info, signed by the PI also, https://ega-archive.org/files/Authorised_submitters_list.docx
 
 ## Encrypting BAM files
 
