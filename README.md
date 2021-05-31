@@ -1,6 +1,6 @@
 # EGA Data submission
 
-Describe steps of data submission to EGA database (it is a pain for a first time submitter), data encryption and submission codes adapted from [Salpie Nowinski](https://github.com/salpie)
+Describe steps of data submission to EGA database (it is such a PAIN for a first time submitter), data encryption and submission codes adapted from [Salpie Nowinski](https://github.com/salpie)
 
 ## Apply EGA submission account
 
@@ -71,6 +71,7 @@ ASPERA_SCP_PASS=[YOUR-PASSWORD] ascp -P33001  -O33001 -QT -l300M -L- $path/"$sam
 There are detailed videos teaching how to fill the metadata , it was really helpful https://ega-archive.org/submission/tools/submitter-portal. But two points may drive you crazy.
 + First of all, DO NOT USE Safri!!! Use other browser instead;
 + For the contact of DAC, do not add space between the telephone number;
++ To fill an analysis object to add VCF file, the 'chromosome box' shows a list containing all identifiers of all chromosomes we selected. To selecte one of them, you have to press ENTER in the blank 'box' on the right side next to "chromosome box", there you will have your selected chromosome shown below the 'left-box'. If your VCF file contains more, use the same way to select all of them. 
 
 Once the whole stage filled up, you will get the accession number after you submit the registered study.
 
