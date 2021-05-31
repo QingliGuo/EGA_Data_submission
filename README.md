@@ -72,7 +72,7 @@ ASPERA_SCP_PASS=[YOUR-PASSWORD] ascp -P33001  -O33001 -QT -l300M -L- $path/"$sam
 
 ## 4. Filling up metadata for the study (MUST READ!!!)
 
-There are detailed videos teaching how to fill the metadata , it was really helpful https://ega-archive.org/submission/tools/submitter-portal. But there are some points may drive you crazy.
+There are detailed videos teaching how to fill the metadata , it was really helpful https://ega-archive.org/submission/tools/submitter-portal. But there are some points where were not mentioned else where, and they may drive you crazy.
 
 + First of all, DO NOT USE Safri!!! Use other browser instead;
 + For the contact of DAC, do not add space between the telephone number;
