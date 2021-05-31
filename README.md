@@ -67,16 +67,22 @@ ASPERA_SCP_PASS=[YOUR-PASSWORD] ascp -P33001  -O33001 -QT -l300M -L- $path/"$sam
 
 ```
 
-## Filling up metadata for the study
+## Filling up metadata for the study (IMPORTANT!!!)
+
 There are detailed videos teaching how to fill the metadata , it was really helpful https://ega-archive.org/submission/tools/submitter-portal. But two points may drive you crazy.
 + First of all, DO NOT USE Safri!!! Use other browser instead;
 + For the contact of DAC, do not add space between the telephone number;
-+ To fill an analysis object to add VCF file, the 'chromosome box' shows a list containing all identifiers of the chromosomes in the genome assembly. To select one of the chr, you **HAVE TO PRESS ENTER in the blank 'box' on the right side next to "chromosome box"**, there you will have your selected chromosome shown below the 'left-box'. If your VCF file contains more, use the same way to select all of them.
++ To fill an analysis object to add VCF file, the 'chromosome box' shows a list containing all identifiers of the chromosomes in the genome assembly. To select one of the chr, you **HAVE TO PRESS ENTER in the blank 'box' on the right side next to "chromosome box"**:
 
 ![test image](https://github.com/QingliGuo/EGA_Data_submission/blob/main/Screen%20Shot%202021-05-29%20at%2013.52.44.png)
 
+Then, you will have your selected chromosome shown below the 'left-box'. If your VCF file contains more, use the same way to select all of them.
+
+![test image2](https://github.com/QingliGuo/EGA_Data_submission/blob/main/Screen%20Shot%202021-05-29%20at%2013.52.44.png)
+
 Once the whole stage filled up, you will get the accession number after you submit the registered study.
 
++ Do not change 
 ## Notify EGA team Re submission completion
 
 Let the EGA team know you are done, so your stuff will be published online.
