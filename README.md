@@ -85,12 +85,13 @@ Then, you will have your selected chromosome shown below the 'left-box'. If your
 
 ![test image2](https://github.com/QingliGuo/EGA_Data_submission/blob/main/Screen%20Shot%202021-05-31%20at%201.54.11.png)
 
-+ Do not add new object to submitted objects. This would lead to "SE" (submitted with error) object, which is not removable from the submitter side. So I would suggest remain each part as a draft and then validate them. Solve the error sections and then do the final submission.
++ Do not add new object to submitted objects. This would lead to "SE" (submitted with error) object, which is not removable from the submitter side. So I would suggest to keep the created objects as drafts ('D') and then validate them ('V'). If there are any errors, solve the error sections, and then do the final submission.
 
 
-Finally, once the whole stage filled up with no error, you can submit and get the accession number! Best of luck!!!
+Finally, you can submit ('S') and get the accession number, study access number is the one needed for the manuscript!
 
 
 ## 5. Notify EGA team Re submission completion
 
 Let the EGA team know you are done, so your stuff will be published online.
+
