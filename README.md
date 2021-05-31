@@ -73,7 +73,7 @@ There are detailed videos teaching how to fill the metadata , it was really help
 + For the contact of DAC, do not add space between the telephone number;
 + To fill an analysis object to add VCF file, the 'chromosome box' shows a list containing all identifiers of the chromosomes in the genome assembly. To select one of the chr, you **HAVE TO PRESS ENTER in the blank 'box' on the right side next to "chromosome box"**, there you will have your selected chromosome shown below the 'left-box'. If your VCF file contains more, use the same way to select all of them.
 
-![test image](Screen Shot 2021-05-29 at 13.52.44.png)
+![test image](https://github.com/QingliGuo/EGA_Data_submission/blob/main/Screen%20Shot%202021-05-29%20at%2013.52.44.png)
 
 Once the whole stage filled up, you will get the accession number after you submit the registered study.
 
