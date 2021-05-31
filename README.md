@@ -1,15 +1,17 @@
 # EGA Data submission
 
-Describe steps of data submission to EGA database (it is such a PAIN for a first time submitter), data encryption and submission codes adapted from [Salpie Nowinski](https://github.com/salpie)
+Here are steps of data submission to EGA database. My goal is to submit a few BAM files as well as a joint VCF file for a study. It was such a PAIN for a first time submitter, especially registering the metadata.
 
-## Apply EGA submission account
+Data encryption and submission codes are adapted from [Salpie Nowinski](https://github.com/salpie)
+
+## 1. Apply EGA submission account
 
 I wrote an email for the account request from EGA helpdesk, helpdesk@ega-archive.org. There maybe other approaches. Currently we need two files to obtain the account:
 
 + Data Processing Agreement (DPA), signed by the PI and institution, https://ega-archive.org/files/EGA_Data_Processing_Agreement_v1.0.pdf
 + Submitter's info, signed by the PI also, https://ega-archive.org/files/Authorised_submitters_list.docx
 
-## Encrypting BAM files
+## 2. Encrypting BAM files (Recommend to process prior to the account application)
 
 This step can be processed prior to the account application as it may takes quite long time.
 
@@ -36,7 +38,8 @@ java -Xmx70G -jar /data/BCI-EvoCa2/salpie/EGA/EgaCryptor/EgaCryptor.jar -file $b
 
 ```
 
-## Sending encrypted files to EGA box
+## 3. Sending encrypted files to EGA box
+
 When encrypted files and account are ready, next step is to submit all files to EGA box associated to your applied account using aspera:
 
 ```
@@ -67,7 +70,7 @@ ASPERA_SCP_PASS=[YOUR-PASSWORD] ascp -P33001  -O33001 -QT -l300M -L- $path/"$sam
 
 ```
 
-## Filling up metadata for the study (IMPORTANT!!!)
+## 4. Filling up metadata for the study (MUST READ!!!)
 
 There are detailed videos teaching how to fill the metadata , it was really helpful https://ega-archive.org/submission/tools/submitter-portal. But there are some points may drive you crazy.
 
@@ -88,6 +91,6 @@ Then, you will have your selected chromosome shown below the 'left-box'. If your
 Finally, once the whole stage filled up with no error, you can submit and get the accession number! Best of luck!!!
 
 
-## Notify EGA team Re submission completion
+## 5. Notify EGA team Re submission completion
 
 Let the EGA team know you are done, so your stuff will be published online.
