@@ -69,7 +69,8 @@ ASPERA_SCP_PASS=[YOUR-PASSWORD] ascp -P33001  -O33001 -QT -l300M -L- $path/"$sam
 
 ## Filling up metadata for the study (IMPORTANT!!!)
 
-There are detailed videos teaching how to fill the metadata , it was really helpful https://ega-archive.org/submission/tools/submitter-portal. But two points may drive you crazy.
+There are detailed videos teaching how to fill the metadata , it was really helpful https://ega-archive.org/submission/tools/submitter-portal. But there are some points may drive you crazy.
+
 + First of all, DO NOT USE Safri!!! Use other browser instead;
 + For the contact of DAC, do not add space between the telephone number;
 + To fill an analysis object to add VCF file, the 'chromosome box' shows a list containing all identifiers of the chromosomes in the genome assembly. To select one of the chr, you **HAVE TO PRESS ENTER in the blank 'box' on the right side next to "chromosome box"**:
