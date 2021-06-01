@@ -88,7 +88,7 @@ Then, you will have your selected chromosome shown below the 'left-box'. If your
 it is to submit (click the blue arrow symbol) the object. 
 
 
-I would suggest to keep the created objects as drafts ('D') and then validate them ('V'). If there are any errors, solve the error sections, and then do the final submission. Finally, you can submit ('S') and get the accession number, study access number is the one needed for the manuscript!
+I would suggest to keep the created objects as drafts ('D') and then validate them ('V'). If there are any errors, solve the error sections, and then do the final submission. With the 'S' sign, you will get the accession number, and it is the one needed for the manuscript!
 
 ## 5. Notify EGA team Re submission completion
 
