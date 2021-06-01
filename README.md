@@ -80,16 +80,15 @@ There are detailed videos teaching how to fill the metadata , it was really help
 
 ![test image](https://github.com/QingliGuo/EGA_Data_submission/blob/main/Screen%20Shot%202021-05-29%20at%2013.52.44.png)
 
-
 Then, you will have your selected chromosome shown below the 'left-box'. If your VCF file contains more, use the same way to select all of them.
 
 ![test image2](https://github.com/QingliGuo/EGA_Data_submission/blob/main/Screen%20Shot%202021-05-31%20at%201.54.11.png)
 
-+ Do not add new object to submitted objects. This would lead to "SE" (submitted with error) object, which is not removable from the submitter side. So I would suggest to keep the created objects as drafts ('D') and then validate them ('V'). If there are any errors, solve the error sections, and then do the final submission.
++ When you modify a submitted object a duplicate is created with "SE" label. The way of removing
+it is to submit (click the blue arrow symbol) the object. 
 
 
-Finally, you can submit ('S') and get the accession number, study access number is the one needed for the manuscript!
-
+I would suggest to keep the created objects as drafts ('D') and then validate them ('V'). If there are any errors, solve the error sections, and then do the final submission. Finally, you can submit ('S') and get the accession number, study access number is the one needed for the manuscript!
 
 ## 5. Notify EGA team Re submission completion
 
