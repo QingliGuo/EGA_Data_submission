@@ -65,7 +65,7 @@ path=/path-to-your-encrypted-files/
 ## **** ADD YOUR PASSWORD and ACCOUNT in each line *****
 
 ASPERA_SCP_PASS=YOUR-PASSWORD ascp -P33001  -O33001 -QT -l300M -L- $path/"$sample".gpg YOUR-ACCOUNT@fasp.ega.ebi.ac.uk:/.
-ASPERA_SCP_PASS=YOUR-vPASSWORD ascp -P33001  -O33001 -QT -l300M -L- $path/"$sample".gpg.md5 YOUR-ACCOUNT@fasp.ega.ebi.ac.uk:/.
+ASPERA_SCP_PASS=YOUR-PASSWORD ascp -P33001  -O33001 -QT -l300M -L- $path/"$sample".gpg.md5 YOUR-ACCOUNT@fasp.ega.ebi.ac.uk:/.
 ASPERA_SCP_PASS=YOUR-PASSWORD ascp -P33001  -O33001 -QT -l300M -L- $path/"$sample".md5 YOUR-ACCOUNT@fasp.ega.ebi.ac.uk:/.
 
 ```
