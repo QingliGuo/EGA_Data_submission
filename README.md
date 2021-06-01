@@ -1,6 +1,6 @@
 # EGA Data submission
 
-Here are steps of data submission to EGA database. My goal is to submit a few BAM files as well as a joint VCF file for a study. It was such a PAIN for a first time submitter, especially registering the metadata.
+Here are steps of data submission to EGA database. My goal was to submit a few BAM files as well as a joint VCF file for a study. It was such a PAIN for a first time submitter, especially registering the metadata.
 
 Data encryption and submission codes are adapted from [Salpie Nowinski](https://github.com/salpie)
 
